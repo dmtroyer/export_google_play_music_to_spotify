@@ -4,13 +4,12 @@ Word on the street is that Google Play Music is going away eventually. I'm going
 
 ## Required
 
-* Python 3
-* [Google Play Music API](https://github.com/simon-weber/gmusicapi)
-  * `pip install gmusicapi`
+* Docker Engine 18.06.0+
+* docker-compose 1.22.0+
 
 ## Export Google Play Music Playlists
 
 ```
-./bin/google_music/authenticate.py
-./bin/google_music/export.py
+docker-compose build
+docker-compose run export ./authenticate.py && ./export.py
 ```
