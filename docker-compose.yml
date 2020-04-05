@@ -6,6 +6,13 @@ services:
     volumes:
       - data-volume:/var/lib/data
       - ./export/bin:/export
+  import:
+    build: ./import
+    volumes:
+      - data-volume:/var/lib/data
+      - ./import:/import
+    ports:
+      - "3000:3000"
 
 volumes:
   data-volume:
