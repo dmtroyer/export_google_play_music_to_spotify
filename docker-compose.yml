@@ -13,6 +13,9 @@ services:
       - ./import:/import
     ports:
       - "3000:3000"
+      - "3035:3035"
+    environment:
+      - WEBPACKER_DEV_SERVER_HOST=0.0.0.0
 
 volumes:
   data-volume:
